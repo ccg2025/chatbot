@@ -56,3 +56,9 @@ function sendMessage(sender, text) {
 
 // Exportamos la función para Firebase
 exports.webhook = functions.https.onRequest(app);
+
+const PORT = process.env.PORT || 3000; // Railway
+
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
+});
